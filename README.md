@@ -8,3 +8,6 @@ Para instalar a aplicação basta abrir o prompt de comando dentro da pasta do p
 
 - gulp
   - inicializa o  projeto na sua máquina.
+
+
+@ Desenvolvido por Thiago Carvalho Fuzaro
