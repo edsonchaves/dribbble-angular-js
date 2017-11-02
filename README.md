@@ -10,4 +10,4 @@ Para instalar a aplicação basta abrir o prompt de comando dentro da pasta do p
   - inicializa o  projeto na sua máquina.
 
 
-& Desenvolvido por Thiago Carvalho Fuzaro
+( Desenvolvido por Thiago Carvalho Fuzaro )
