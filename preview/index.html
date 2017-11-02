@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR" ng-app="App">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <base href="/" />
+
+    <title>Dribbble - AngularJs</title>
+
+    <!-- htmlbuild:css -->
+    <link rel="stylesheet" href="/css/App.css" />
+    <!-- endbuild -->
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="brand-img" href="#/"><img src="https://cdn.dribbble.com/assets/logo-footer-hd-a05db77841b4b27c0bf23ec1378e97c988190dfe7d26e32e1faea7269f9e001b.png" alt="dribbble"></a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+<main ng-view></main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <p class="text-footer text-center">
+                        Desenvolvido por Thiago Fuzaro - 2017
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <loading></loading>
+
+    <!-- htmlbuild:js -->
+    <script src="/js/App.js"></script>
+    <!-- endbuild -->
+</body>
+</html>
+

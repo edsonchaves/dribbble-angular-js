@@ -1,0 +1,44 @@
+<div class="container">
+	<div class="row">
+		<alert-message ng-show="serviceFail" message="{{ serviceFail }}"></alert-message>
+		<div class="col-xs-12 col-sm-12 margin__bottom--15">
+			<div class="form-inline pull-right">
+			  <div class="form-group">
+			    <input type="text" class="form-control" placeholder="O que deseja buscar?" ng-model="search">
+			  </div>
+			</div>
+			<div class="pull-left">
+				<div class="btn-group" role="group" aria-label="...">
+				  <button type="button" class="btn btn-default" ng-click="resizeShots( 'small' )"><span class="glyphicon glyphicon-th"></span></button>
+				  <button type="button" class="btn btn-default" ng-click="resizeShots( 'large' )"><span class="glyphicon glyphicon-th-large"></span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row" ng-show="searchResult">
+		<div class="col-xs-12 col-sm-12">
+			<div class="alert alert-info" role="alert">
+				Você buscou por: <strong>{{ searchResult }}</strong>			
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="margin__bottom--25" ng-class="shotSize === 'small' ? 'col-sm-3 col-xs-6' : shotSize === 'large' ? 'col-sm-4 col-xs-12' : 'col-sm-3 col-xs-12'" ng-repeat="shot in shots | filter: search">
+			<a href="#/shot/{{ shot.id }}" class="no-style__link text-muted thumbnail" title="{{ shot.title }}">
+				<figure>
+					<img src="{{ shotSize === 'small' ? shot.images.teaser : shotSize === 'large' ? shot.images.normal : shot.images.teaser }}" alt="{{ shot.title }}">
+					<figcaption>
+						<img src="{{ shot.user.avatar_url }}" alt="{{ shot.user.name }}" class="pull-left avatar-teaser">
+						<h4 class="font__size--15 nowrap">{{ shot.title }}</h4>
+					</figcaption>
+				</figure>
+			</a>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 text-center margin__bottom--25">
+			<button type="button" class="btn btn-info" ng-click="getMoreShots()"><span class="glyphicon glyphicon-plus"></span> Carregar mais shots</button>
+		</div>
+	</div>
+	<go-top></go-top>
+</div>

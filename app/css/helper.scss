@@ -1,0 +1,75 @@
+// helper
+.margin {
+    &__bottom {
+        &--15 {
+            margin-bottom: 15px;
+        }
+
+        &--25 {
+            margin-bottom: 25px;
+        }
+    }
+
+    &__all {
+        &--0 {
+            margin: 0px;
+        }
+    }
+}
+
+.font {
+    &__size {
+        &--15 {
+            font-size: 16px !important;
+        }
+    }
+}
+
+.no-style {
+    &__link {
+        text-decoration: none !important;
+    }
+}
+
+.avatar-teaser {
+    width: 16px;
+    margin-right: 5px;
+}
+
+.nowrap {
+    white-space: nowrap;
+    overflow:hidden !important;
+    text-overflow: ellipsis;
+}
+
+.brand-img {
+    width: 130px;
+    display: block;
+    padding: 11px;
+}
+
+.go-top {
+
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    background: #222;
+    border-radius: 50%;
+    text-align: center;
+    opacity: 0.8;
+
+    &:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    span {
+        font-size: 20px;
+        padding: 14px;
+        color: #FFF;
+    }
+
+}

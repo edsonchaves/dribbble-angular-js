@@ -1,0 +1,49 @@
+<div class="container">
+    <form name="mainForm" ng-submit="formSubmit()" novalidate>
+        <div class="alert alert-info">
+            <strong>Todos os campos com asterisco (*) são de preenchimento obrigatório.</strong>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <h3>Formulário Exemplo</h3>
+                <hr />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-4">
+                <div class="form-group" ng-class="{ 'has-error' : mainForm.maskField.$invalid && !mainForm.maskField.$pristine }">
+                    <label for="mask-field">Campo de Máscara:*</label>
+                    <input type="text" name="maskField" id="mask-field" class="form-control" ng-model="form.maskField" ui-mask="999.999-999.999" ui-mask-placeholder ui-mask-placeholder-char="_" ng-required="true" />
+
+                    <field-message ng-show="mainForm.maskField.$error.required && !mainForm.maskField.$pristine" message="{{ messages.requiredField }}"></field-message>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <div class="form-group" ng-class="{ 'has-error' : mainForm.simpleField.$invalid && !mainForm.simpleField.$pristine || mainForm.simpleField.$error.maxlength }">
+                    <label for="simple-field">Campo Simples:*</label>
+                    <input type="text" name="simpleField" id="simple-field" class="form-control" maxlength="60" ng-model="form.simpleField" ng-maxlength="60" ng-required="true" field-pattern not-paste-field />
+
+                    <field-message ng-show="mainForm.simpleField.$error.required && !mainForm.simpleField.$pristine" message="{{ messages.requiredField }}"></field-message>
+                    <field-message ng-show="mainForm.simpleField.$error.maxlength" message="{{ messages.maxlength60 }}"></field-message>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <div class="form-group" ng-class="{ 'has-error' : mainForm.fieldDate.$invalid && !mainForm.fieldDate.$pristine || mainForm.fieldDate.$error.invalidDate }">
+                    <label for="field-date" uib-tooltip="Campo de Data" tooltip-placement="top">Campo de Data:*</label>
+                    <input type="text" name="fieldDate" id="field-date" class="form-control" ng-model="form.fieldDate" ui-mask="99/99/9999" ui-mask-placeholder ui-mask-placeholder-char="_" ng-required="true" validate-date not-paste-field />
+
+                    <field-message ng-show="mainForm.fieldDate.$error.required && !mainForm.fieldDate.$pristine" message="{{ messages.requiredField }}"></field-message>
+                    <field-message ng-show="mainForm.fieldDate.$error.invalidDate && !mainForm.fieldDate.$error.required" message="{{ messages.invalidDate }}"></field-message>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <button type="submit" class="btn btn-primary" ng-disabled="mainForm.$invalid">Enviar</button>
+            </div>
+        </div>
+    </form>
+</div>
