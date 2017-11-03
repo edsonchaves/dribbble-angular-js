@@ -2,7 +2,7 @@
 
 ## Introdução
 
-> Uma aplicação desenvolvida em AngularJs 1 utilizando a API de Shots do Dribbble.
+> Uma aplicação desenvolvida em AngularJs 1 utilizando a API de Shots do [Dribbble](http://developer.dribbble.com/).
 
 ## Instalação
 
