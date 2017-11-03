@@ -4,11 +4,14 @@
   "description": "Arquitetura com AngularJS e Bootstrap",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "node_modules/.bin/bower install",
+    "start": "gulp"
   },
   "author": "fuzaro",
   "license": "ISC",
   "devDependencies": {
+    "bower": "^1.8.2",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.0.4",
     "gulp-concat": "^2.6.1",
@@ -18,10 +21,10 @@
     "gulp-htmlmin": "^3.0.0",
     "gulp-jshint": "^2.0.4",
     "gulp-live-server": "0.0.30",
+    "gulp-open": "^2.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^2.1.2",
-    "jshint": "^2.9.4",
-    "gulp-open": "^2.0.0"
+    "jshint": "^2.9.4"
   }
 }
